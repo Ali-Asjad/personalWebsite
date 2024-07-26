@@ -9,7 +9,7 @@ const HeaderContainer = styled.header`
   height: 100vh;
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
   text-align: center;
-  padding-top: 5rem;
+  padding-top: 3rem;
 `;
 
 const ProfileImage = styled.img`
@@ -45,7 +45,7 @@ const Header = () => {
     <HeaderContainer>
       <ProfileImage src="/pfp.jpg" alt="Profile" />
       <Name>Hello! I am Ali Asjad</Name>
-      <Title>Software Developer interested <br/> in Back-end Development</Title>
+      <Title>Full Stack Developer focused <br/> on Back-end Development</Title>
       <ButtonGroup>
         <button>Download CV</button>
         <button>Contact Info</button>

@@ -1,36 +1,48 @@
 import React from 'react';
-import { Link } from 'react-scroll';
 import styled from 'styled-components';
+import Logo from './Logo';  // Import the Logo component
 
-const Nav = styled.nav`
+const NavbarContainer = styled.nav`
   display: flex;
-  justify-content: center;
-  padding: 1rem;
-  background-color: white;
-  position: fixed;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: fixed;
   top: 0;
+  left: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `;
 
-const NavLink = styled(Link)`
-  margin: 0 1rem;
+const NavLinks = styled.div`
+  display: flex;
+  gap: 1.5rem;
+`;
+
+const NavLink = styled.a`
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
   cursor: pointer;
-  font-weight: bold;
+
   &:hover {
-    color: #007bff;
+    color: #007BFF;
   }
 `;
 
 const Navbar = () => {
   return (
-    <Nav>
-      <NavLink to="about" smooth={true} duration={1000}>About</NavLink>
-      <NavLink to="experience" smooth={true} duration={1000}>Experience</NavLink>
-      <NavLink to="projects" smooth={true} duration={1000}>Projects</NavLink>
-      <NavLink to="contact" smooth={true} duration={1000}>Contact</NavLink>
-    </Nav>
+    <NavbarContainer>
+      <Logo />  {/* Use the Logo component */}
+      <NavLinks>
+        <NavLink href="#about">About</NavLink>
+        <NavLink href="#experience">Experience</NavLink>
+        <NavLink href="#projects">Projects</NavLink>
+        <NavLink href="#contact">Contact</NavLink>
+      </NavLinks>
+    </NavbarContainer>
   );
 };
 
