@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const AboutSection = styled.section`
-  padding: 4rem 2rem;
+  padding: 4rem 6rem;
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
   height: 100vh;
 `;
@@ -14,15 +14,18 @@ const Title = styled.h2`
 `;
 
 const SubTitle = styled.h3`
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
+  font-family: "Ubuntu", sans-serif;
 `;
 
 const Description = styled.p`
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 
   span {
     color: #ffcc00; /* Highlighted text color */
@@ -38,7 +41,7 @@ const CardContainer = styled.div`
 `;
 
 const Card = styled.div`
-  background-color: #282828;
+  background-color: #807f7e;
   padding: 2rem;
   border-radius: 10px;
   flex: 1;
@@ -46,20 +49,24 @@ const Card = styled.div`
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  height: 300px;
 
   &:hover {
     transform: translateY(-10px);
   }
 
   img {
-    width: 50px;
+    width: 100px;
+    min-height: 100px;
     margin-bottom: 1rem;
+    margin-top: 0.5rem;
   }
 
   h4 {
-    font-size: 1.2rem;
+    font-size: 1.75rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
+    color: #f2f7f4;
   }
 `;
 
@@ -69,24 +76,27 @@ const About = () => {
       <SubTitle>About Me</SubTitle>
       <Title>Overview.</Title>
       <Description>
-        I am a Computer Science graduate from the University of Guelph
+        I am a Computer Science graduate from the University of Guelph and a Full Stack developer based in Mississauga <br />
+        working full time as a web designer at the University of Guelph. I love working with new technology and creating innovative <br />
+        solutions. When I am not coding, you would probably find me on a soccer field or a cricket ground. My passion for technology and <br/>
+        data has driven me to pursue a career as a Back-end developer with a focus on Cloud technologies like AWS, GCP and Azure
       </Description>
       <CardContainer>
         <Card>
-          <img src="/path/to/web-developer-icon.png" alt="Web Developer" />
+          <img src="/logo192.png" alt="Web Developer" />
           <h4>Web Developer</h4>
         </Card>
         <Card>
-          <img src="/path/to/automations-developer-icon.png" alt="Automations Developer" />
-          <h4>Automations Developer</h4>
+          <img src="/pythonLogo.png" alt="Automations Developer" />
+          <h4>Python Developer</h4>
         </Card>
         <Card>
-          <img src="/path/to/backend-engineer-icon.png" alt="Backend Engineer" />
+          <img src="/backendLogo.png" alt="Backend Engineer" />
           <h4>Backend Engineer</h4>
         </Card>
         <Card>
-          <img src="/path/to/technical-writer-icon.png" alt="Technical Writer" />
-          <h4>Technical Writer</h4>
+          <img src="/awsLogo.png" alt="Technical Writer" />
+          <h4>Cloud Developer</h4>
         </Card>
       </CardContainer>
     </AboutSection>
