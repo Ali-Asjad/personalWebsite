@@ -18,12 +18,20 @@ const ButtonWrapper = styled.a`
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
   }
 
   & > img {
     margin-left: 0.5rem;
     width: 20px;
     height: 20px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+
+  &:hover > img {
+    filter: none;
+    transform: scale(1.1);
   }
 `;
 

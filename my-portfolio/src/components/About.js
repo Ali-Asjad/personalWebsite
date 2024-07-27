@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const AboutSection = styled.section`
-  padding: 4rem 6rem;
+  padding: 4rem 8rem;
   background: inherit;
   height: 100vh;
 `;

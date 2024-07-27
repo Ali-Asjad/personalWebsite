@@ -45,9 +45,9 @@ const Header = () => {
       <Name>Hello! I am Ali Asjad</Name>
       <Title>Full Stack Developer focused <br/> on Back-end Development</Title>
       <ButtonGroup>
-        <Button icon="downloadLogo.png">Resume</Button>
-        <Button icon="linkedinLogo.png"></Button>
-        <Button icon="githubLogo.png"></Button>
+        <Button href="resume.pdf" icon="Icons/downloadLogo.png">Resume</Button>
+        <Button href="https://www.linkedin.com/in/ali-asjad-412515229/" icon="Icons/linkedinLogo.png"></Button>
+        <Button href="https://github.com/Ali-Asjad" icon="Icons/githubLogo.png"></Button>
       </ButtonGroup>
     </HeaderContainer>
   );

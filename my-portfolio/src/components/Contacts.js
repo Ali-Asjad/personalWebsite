@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const ContactSection = styled.section`
   background: inherit; /* Light background */
   color: #000; /* Dark text color */
-  padding: 4rem 2rem;
-  height: 100vh;
+  padding: 6rem 2rem;
+  height: 80vh;
   text-align: center;
 `;
 
