@@ -39,7 +39,7 @@ const Navbar = () => {
       <NavLinks>
         <NavLink href="#about">About</NavLink>
         <NavLink href="#experience">Experience</NavLink>
-        <NavLink href="#projects">Projects</NavLink>
+        {/* <NavLink href="#projects">Projects</NavLink> */}
         <NavLink href="#contact">Contact</NavLink>
       </NavLinks>
     </NavbarContainer>

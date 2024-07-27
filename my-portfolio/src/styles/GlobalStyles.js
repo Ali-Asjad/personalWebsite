@@ -6,6 +6,9 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     color: #333;
     scroll-behavior: smooth;
+    background-color: #f5f7fa;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    scroll-behavior: smooth;
   }
   
   * {
@@ -17,7 +20,8 @@ const GlobalStyle = createGlobalStyle`
   }
   
   p {
-    margin: 0 0 1rem;
+    margin: 0 0 0.25rem;
+    font-family: 'Roboto', sans-serif;
   }
   
   a {

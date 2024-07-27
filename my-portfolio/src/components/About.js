@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const AboutSection = styled.section`
   padding: 4rem 6rem;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  background: inherit;
   height: 100vh;
 `;
 
@@ -41,7 +41,7 @@ const CardContainer = styled.div`
 `;
 
 const Card = styled.div`
-  background-color: #807f7e;
+  background-color: #9bc4c4;
   padding: 2rem;
   border-radius: 10px;
   flex: 1;
@@ -76,26 +76,26 @@ const About = () => {
       <SubTitle>About Me</SubTitle>
       <Title>Overview.</Title>
       <Description>
-        I am a Computer Science graduate from the University of Guelph and a Full Stack developer based in Mississauga <br />
+        I am a Computer Science graduate from the University of Guelph and a Full Stack developer based in Mississauga, <br />
         working full time as a web designer at the University of Guelph. I love working with new technology and creating innovative <br />
         solutions. When I am not coding, you would probably find me on a soccer field or a cricket ground. My passion for technology and <br/>
         data has driven me to pursue a career as a Back-end developer with a focus on Cloud technologies like AWS, GCP and Azure
       </Description>
       <CardContainer>
         <Card>
-          <img src="/logo192.png" alt="Web Developer" />
+          <img src="/Icons/logo192.png" alt="Web Developer" />
           <h4>Web Developer</h4>
         </Card>
         <Card>
-          <img src="/pythonLogo.png" alt="Automations Developer" />
+          <img src="/Icons/pythonLogo.png" alt="Automations Developer" />
           <h4>Python Developer</h4>
         </Card>
         <Card>
-          <img src="/backendLogo.png" alt="Backend Engineer" />
+          <img src="/Icons/backendLogo.png" alt="Backend Engineer" />
           <h4>Backend Engineer</h4>
         </Card>
         <Card>
-          <img src="/awsLogo.png" alt="Technical Writer" />
+          <img src="/Icons/awsLogo.png" alt="Technical Writer" />
           <h4>Cloud Developer</h4>
         </Card>
       </CardContainer>

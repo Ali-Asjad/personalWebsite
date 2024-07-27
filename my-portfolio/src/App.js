@@ -4,9 +4,11 @@ import GlobalStyle from './styles/GlobalStyles';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import About from './components/About';
+import Experience from './components/Experience';
+import Contact from './components/Contacts';
 
 const Section = styled.section`
-  height: 100vh;
+  // height: 100vh;
 `;
 
 const App = () => {
@@ -21,16 +23,10 @@ const App = () => {
         <About />
       </Section>
       <Section id="experience">
-        <h2>Experience</h2>
-        <p>This is the experience section.</p>
-      </Section>
-      <Section id="projects">
-        <h2>Projects</h2>
-        <p>This is the projects section.</p>
+        <Experience/>
       </Section>
       <Section id="contact">
-        <h2>Contact</h2>
-        <p>This is the contact section.</p>
+        <Contact/>
       </Section>
     </>
   );

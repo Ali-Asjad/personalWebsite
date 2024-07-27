@@ -29,7 +29,7 @@ const LogoText = styled.span`
 const Logo = () => {
   return (
     <LogoContainer href="#header">
-      <LogoImage src="/logo.png" alt="Logo" />
+      <LogoImage src="/Icons/logo.png" alt="Logo" />
       <LogoText>Ali Asjad</LogoText>
     </LogoContainer>
   );

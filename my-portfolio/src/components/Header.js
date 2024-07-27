@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Button from './Button';
 
 const HeaderContainer = styled.header`
   display: flex;
@@ -7,7 +8,6 @@ const HeaderContainer = styled.header`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
   text-align: center;
   padding-top: 3rem;
 `;
@@ -34,21 +34,20 @@ const Title = styled.p`
 `;
 
 const ButtonGroup = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  font-family: "Ubuntu", sans-serif;
+  margin-top: 2rem;
 `;
+
 
 const Header = () => {
   return (
     <HeaderContainer>
-      <ProfileImage src="/pfp.jpg" alt="Profile" />
+      <ProfileImage src="/Icons/pfp.jpg" alt="Profile" />
       <Name>Hello! I am Ali Asjad</Name>
       <Title>Full Stack Developer focused <br/> on Back-end Development</Title>
       <ButtonGroup>
-        <button>Download CV</button>
-        <button>Contact Info</button>
+        <Button icon="downloadLogo.png">Resume</Button>
+        <Button icon="linkedinLogo.png"></Button>
+        <Button icon="githubLogo.png"></Button>
       </ButtonGroup>
     </HeaderContainer>
   );
