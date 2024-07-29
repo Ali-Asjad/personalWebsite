@@ -41,7 +41,7 @@ const CardContainer = styled.div`
 `;
 
 const Card = styled.div`
-  background-color: #9bc4c4;
+  background-color: #506573;
   padding: 2rem;
   border-radius: 10px;
   flex: 1;
