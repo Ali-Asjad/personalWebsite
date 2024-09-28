@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import Logo from './Logo';  // Import the Logo component
+import Logo from './Logo';
 
 const NavbarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem 2rem;
-  background-color: #fff;
+  height: 15vh;
+  padding: 2rem 4rem;
+  background-color: rgba(40, 41, 63, 1);
   position: fixed;
   top: 0;
   left: 0;
@@ -23,12 +24,12 @@ const NavLinks = styled.div`
 
 const NavLink = styled.a`
   text-decoration: none;
-  color: #333;
+  color: rgba(250, 250, 250, 1);
   font-size: 1rem;
   cursor: pointer;
-
+  font-family: "Lato", sans-serif;
   &:hover {
-    color: #007BFF;
+    color: rgba(254, 111, 90, 1);
   }
 `;
 

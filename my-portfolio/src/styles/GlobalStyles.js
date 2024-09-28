@@ -6,8 +6,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     color: #333;
     scroll-behavior: smooth;
-    background-color: #f5f7fa;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    background-color: rgba(40, 41, 63, 1);
     scroll-behavior: smooth;
   }
   

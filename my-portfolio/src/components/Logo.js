@@ -17,20 +17,14 @@ const LogoContainer = styled.a`
 
 const LogoImage = styled.img`
   border-radius: 70%;
-  width: 40px;
-  height: 40px;
+  transform: scale(0.5);
   margin-right: 0.5rem;
-`;
-
-const LogoText = styled.span`
-  font-family: 'Roboto', sans-serif;  /* Replace with your selected font */
 `;
 
 const Logo = () => {
   return (
     <LogoContainer href="#header">
-      <LogoImage src="/Icons/logo.png" alt="Logo" />
-      <LogoText>Ali Asjad</LogoText>
+      <LogoImage src="/Icons/signature.png" alt="Logo" />
     </LogoContainer>
   );
 };
