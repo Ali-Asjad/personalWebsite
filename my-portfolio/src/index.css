@@ -1,12 +1,157 @@
-/* Container holding everything */
-.hero-container {
+/* Logo css */
+.logoContainer {
+  cursor: pointer;
+}
+
+.logoImg {
+  transform: scale(0.6);
+}
+
+/* Navbar css */
+.navbarContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 15vh;
+  padding: 2rem 4rem;
+  background-color: rgba(40, 41, 63, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: rgba(250, 250, 250, 1);
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+  &:hover {
+    color: rgba(254, 111, 90, 1);
+  }
+}
+
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: flex;
+}
+
+.mobile-menu-icon {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hide navigation links and show hamburger button on mobile */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar .navLink {
+    padding: 10px;
+    margin: 10px;
+    color: rgb(250, 250, 250);
+    font-family: "Ubuntu", sans-serif;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
+}
+
+
+/* Hero component css */
+.heroContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 4rem;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  max-width: 50vw;
+}
+
+.heroTitle {
+  font-size: 2rem;
+  color: #fe6f5a;
+  text-align: left;
+}
+
+.name {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+}
+
+.description {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  font-family: "Ubuntu", sans-serif;
+  text-align: left;
+}
+
+.buttonGroup {
+  margin-top: 2rem;
+}
+
+.img-container {
   position: relative;
   display: none; /* Hidden by default */
 }
 
-/* Display the hero section only on extra-large screens (1200px or wider) */
 @media (min-width: 1200px) {
-  .hero-container {
+  .img-container {
     display: flex;
   }
 }
@@ -40,4 +185,40 @@
   border-radius: 40%;
   top: 10px;
   left: 20px;
+}
+
+/* experience component css */
+.experienceSection {
+  background: inherit;
+  padding: 3rem 4rem;
+  max-height: 300vh;
+}
+
+.expTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+
+@media (max-width: 1200px){
+  .navbarContainer{
+    
+  }
+  .heroContainer {
+    gap: 0px;
+    height: 100vh;
+    padding: 30px;
+  }
+  .descriptionContainer {
+    align-items: center;
+    justify-content: center;
+    max-width: 100vw;
+  }
+  .name, .title, .description {
+    text-align: center;
+  }
 }

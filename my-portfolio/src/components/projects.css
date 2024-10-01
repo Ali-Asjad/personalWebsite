@@ -3,7 +3,7 @@
     padding: 6rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
-    height: 150vh;
+    max-height: 450vh;
   }
   
   .header p {
@@ -95,4 +95,17 @@
     border-radius: 5px;
     font-size: 14px;
   }
+
+@media (max-width: 1200px){
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .project-card {
+    width: 80vw;
+    height: 60vh;
+  }
+}
   

@@ -1,49 +1,42 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
 import Logo from './Logo';
-
-const NavbarContainer = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 15vh;
-  padding: 2rem 4rem;
-  background-color: rgba(40, 41, 63, 1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-`;
-
-const NavLinks = styled.div`
-  display: flex;
-  gap: 1.5rem;
-`;
-
-const NavLink = styled.a`
-  text-decoration: none;
-  color: rgba(250, 250, 250, 1);
-  font-size: 1rem;
-  cursor: pointer;
-  font-family: "Lato", sans-serif;
-  &:hover {
-    color: rgba(254, 111, 90, 1);
-  }
-`;
+import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'; // For hamburger and close icons
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false); // State to toggle sidebar
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen); // Toggle the sidebar
+  };
+
   return (
-    <NavbarContainer>
-      <Logo />  {/* Use the Logo component */}
-      <NavLinks>
-        <NavLink href="#about">About</NavLink>
-        <NavLink href="#experience">Experience</NavLink>
-        {/* <NavLink href="#projects">Projects</NavLink> */}
-        <NavLink href="#contact">Contact</NavLink>
-      </NavLinks>
-    </NavbarContainer>
+    <div className='navbarContainer'>
+      <Logo /> {/* Logo on the left */}
+
+      <div className='navLinks desktop-only'>
+        {/* Navigation links for desktop */}
+        <a className='navLink' href="#hero">Home</a>
+        <a className='navLink' href="#experience">Experience</a>
+        <a className='navLink' href="#projects">Projects</a>
+        <a className='navLink' href="#contact">Contact</a>
+      </div>
+
+      <div className='mobile-menu-icon mobile-only' onClick={toggleSidebar}>
+        {/* Hamburger icon for mobile */}
+        {isOpen ? <RiCloseLine /> : <RiMenu3Line />}
+      
+
+        <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+          {/* Sidebar menu */}
+          <a className='navLink' href="#hero" onClick={toggleSidebar}>Home</a>
+          <a className='navLink' href="#experience" onClick={toggleSidebar}>Experience</a>
+          <a className='navLink' href="#projects" onClick={toggleSidebar}>Projects</a>
+          <a className='navLink' href="#contact" onClick={toggleSidebar}>Contact</a>
+        </div>
+      </div>
+
+      {isOpen && <div className="overlay" onClick={toggleSidebar} />} {/* Overlay for mobile */}
+    </div>
   );
 };
 

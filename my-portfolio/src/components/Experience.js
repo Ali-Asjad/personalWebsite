@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 // import { ReactComponent as WorkIcon } from '../uogLogo.svg';
@@ -39,22 +38,6 @@ const experiences = [
     ]
   },
 ]
-
-const ExperienceSection = styled.section`
-  background: inherit;
-  padding: 6rem 6rem;
-  height: 160vh;
-`;
-
-const Title = styled.h2`
-  font-size: 2.5rem;
-  font-weight: bold;
-  font-family: "Ubuntu", sans-serif;
-  color: #fff;
-  margin-bottom: 4rem;
-  text-align: center;
-`;
-
 
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
@@ -101,14 +84,14 @@ const ExperienceCard = ({ experience }) => (
 
 const Experience = () => {
   return (
-    <ExperienceSection id="experience">
-      <Title>Work Experience</Title>
+    <div className='experienceSection' id="experience">
+      <h2 className='expTitle'>Work Experience</h2>
       <VerticalTimeline lineColor='#fe705a'>
         {experiences.map((experience, index) => (
           <ExperienceCard key={index} experience={experience} />
         ))}
       </VerticalTimeline>
-    </ExperienceSection>
+    </div>
   );
 };
 
