@@ -71,15 +71,11 @@ const projects = [
     description: "You are looking at it right now! This React project showcases my skills and projects as a full-stack developer. The site highlights my experience, recent work, and passion for web-design, back-end development, and cloud technologies.",
     tags: [
       {
-        name: "next.js",
+        name: "react.js",
         color: ""
       },
       {
-        name: "firebase",
-        color: ""
-      },
-      {
-        name: "gemini",
+        name: "tailwind",
         color: ""
       },
     ],

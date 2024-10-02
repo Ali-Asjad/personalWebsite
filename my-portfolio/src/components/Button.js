@@ -39,6 +39,10 @@ const ButtonWrapper = styled.a`
     filter: none;
     transform: scale(1.1);
   }
+
+  @media (max-width: 400px){
+    margin: 0 0;
+  }
 `;
 
 const Button = ({ href, icon, children, variant = 'primary' }) => {
